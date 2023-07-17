@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>그리드예제3</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 600px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 30px auto;
+    }
+
+    .items {
+      position: relative;
+      text-align: center;
+    }
+    .items .text{
+      width: 100%;
+      position: absolute; /*포지션 absolute 줘야 칸 무시하고 이동 */
+      top: 150px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 10px 0;
+      height: 30px;
+    }
+    .items .text p{
+      margin-bottom: 20px;
+    }
+    .text:hover{
+      transform: translateY(-100px);
+      transition: 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="items">
+      <img src="images/배경.jpg">
+      <div class="text">
+        <p>하이</p>
+        <p>방가방가</p>
+        <p>반갑습니다</p>
+      </div>
+    </div>
+    <div class="items">
+      <img src="images/배경.jpg">
+      <div class="text">
+        <p>하이</p>
+        <p>방가방가</p>
+        <p>반갑습니다</p>
+      </div>
+
+    </div>
+    <div class="items">
+      <img src="images/배경.jpg">
+      <div class="text">
+        <p>하이</p>
+        <p>반갑습니다</p>
+        <p>또만나요</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

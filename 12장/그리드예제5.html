@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>그리드예제5</title>
+  <style>
+    #wrapper{
+      display: grid;
+      grid-template-columns: repeat(3,200px); /*repeat(3, 1fr)*/ 
+      grid-gap:20px 30px; /*위아래 간격 20px 좌우 관격 30px*/
+      margin-bottom: 20px;
+    }
+    .items:nth-child(2n+1){
+      background: lightgrey;
+    }
+    .items:nth-child(2n){
+      background-color: whitesmoke;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사아자차카타파하</div>
+    <div class="items">가나다라마바사</div> 
+  </div>
+</body>
+</html>

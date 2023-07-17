@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>그리드예제6</title>
+  <style>
+    #wrapper {
+      display: grid;
+      width: 700px;
+      grid-template-columns: repeat(3,1fr); /*한 칸은 약 233px 3칸 동일하게 설정*/
+      grid-template-rows: repeat(3,100px);  /*한 줄은 각 100px 설정*/
+    }
+    .box{
+      text-align: center;
+      line-height: 100px;
+      color: white;
+    }
+    .box1{
+      background: blue;
+      grid-column: 1/4; /*가로 첫 줄 1부터 4까지 */
+    }
+    .box2{
+      background: green;
+      grid-row: 2/4; /* 처음시작이라 칼럼 필요 x 세로 2줄 2부터 4까지 */
+    }
+    .box3{
+      background: orange;
+      grid-column: 2/4; /*가로 2부터 4까지*/ /*2번째 줄*/
+      grid-row: 2/4;  /*원래는 box4 yellow영역도 침범해야 하지만, box4의 grid-row-start가 있기 때문에 침범하지 않는다.*/
+    }
+    .box4{
+      background: yellow;
+      grid-column: 3/4; /*가로 3번부터 4번*/
+      grid-row-start: 3; /*세로 3번 스타트 */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+  </div>
+</body>
+
+</html>
