@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var score1 = prompt("필기 점수는?");
+    var score2 = prompt("실기 점수는?");
+    result = parseInt(score1) + parseInt(score2);
+    avg = result/2; //document.write(avg) NaN = Not a Number
+    if(avg>=90){
+      document.write("당신의 등급은 : 최우수")
+    }
+    else if(avg>=80){
+      document.write("당신의 등급은 : 우수")
+    }
+    else{document.write("당신의 등급은 : 일반")}
+  </script>
+</body>
+</html>
