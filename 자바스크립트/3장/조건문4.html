@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>조건문4</title>
+</head>
+
+<body>
+  <script>
+    var id = "자바";
+    var password = "1234";
+    var user_id = prompt("아이디를 입력하세요");
+    var user_password = prompt("비밀번호를 입력하세요");
+
+
+    if (user_id == id) {
+      if (password == user_password) {
+        alert("환영합니다"); //alert 경고창으로 메세지 출력
+      } else {
+        alert("비밀번호가 틀립니다");
+        location.reload(); // 새로 고침
+      }
+    } else {
+        alert("아이디가 존재하지 않습니다");
+        location.reload();
+      }
+
+    /*  아이디와 비번이 모두 맞으면 환영합니다 출력
+     아이디는 맞는데 비번이 틀리면 비밀번호가 틀립니다 출력
+     아이디가 맞지 않으면 존재하지 않는 아이디 입니다 출력
+     1차 조건문 아이디 확인 -> 2차 조건 비밀번호 확인 */
+  </script>
+</body>
+
+</html>

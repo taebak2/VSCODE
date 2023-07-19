@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>조건문1</title>
+</head>
+
+<body>
+  <script>
+    /*  숫자 2개를 입력 받으세요
+     두 숫자를 더한 값이 3의 배수 이거나 4의 배수면 3,4의 배수입니다 출력
+     아니면 3,4의 배수가 아닙니다 출력 */
+
+    var num1 = parseInt(prompt("첫 번째 숫자를 입력하세요"));
+    var num2 = parseInt(prompt("첫 번째 숫자를 입력하세요"));
+    var result = num1 + num2;
+    if (result % 3 == 0 || result % 4 == 0) {
+      document.write("3,4의 배수입니다.")
+    } else {
+      document.write("3,4의 배수가 아닙니다");
+    }
+
+    /*if문 (조건)에 num = 0 -> false
+      num = 0을 제외한 다른 값 -> true 
+      문자의 경우 아무것도 입력 안함 -> false
+                     */
+    var userName = prompt("방문자의 이름은?");
+    if(userName){
+      document.write(userName+"님 반갑습니다! 방문을 환영합니다.")
+    }
+
+  </script>
+</body>
+
+</html>

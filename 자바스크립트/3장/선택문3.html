@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var memNum = parseInt(prompt("입장객은 몇 명 인가요?"));
+    var colNum = parseInt(prompt("한 줄에 몇 명씩 앉나요?"));
+
+    var result = parseInt(memNum / colNum);
+    var a = parseInt(memNum % colNum);
+
+
+    /* 방법2
+        if(a){
+      result++;
+    }
+    alert("모두 " + result + "줄이 필요합니다."); */
+
+
+
+    if (memNum % colNum == 0) {
+      alert("모두" + parseInt((memNum / colNum)) + "줄이 필요합니다.");
+    }
+    else {
+      alert("모두 " + parseInt((memNum / colNum) + 1) + "줄이 필요하고 " + (colNum - (memNum % colNum)) + "좌석이 남습니다."); 
+      
+      // 남는 좌석 var remain = colNum(나누는 수) * result(몫) - memNum(입장객)
+    }
+
+
+
+    // 예)입장객 32명 한 줄에 7명씩
+    // 출력) 모두 5줄이 필요하고 3좌석이 남습니다.
+  </script>
+
+</body>
+
+</html>

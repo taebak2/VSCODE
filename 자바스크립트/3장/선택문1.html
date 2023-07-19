@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>선택문1</title>
+</head>
+
+<body>
+  <script>
+    var site = prompt("네이버, 다음 구글 중 즐겨 사용하는 사이트는?");
+    var url;
+
+
+    switch (site) {
+      case "구글":
+        url = "www.google.com";
+        break;
+      case "다음":
+        url = "www.daum.net";
+        break;
+      case "네이버":
+        url = "www.naver.com";
+        break;
+        default:
+        alert("다시 입력해주세요");
+        location.reload();
+    }
+
+    if(url){
+      location.href="http://" + url; // location.href -> 해당 링크로 이동 
+    }
+  </script>
+</body>
+
+</html>
