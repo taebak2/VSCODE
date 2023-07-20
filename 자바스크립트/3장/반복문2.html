@@ -13,7 +13,7 @@
     var run = true;
     while (run) {
       var num = parseInt(prompt("숫자를 입력하세요"));
-      if (num == null) {
+      if (num == null) { // null 대신 NaN도 가능 
         location.reload();
       }
       else if (num == 0) {

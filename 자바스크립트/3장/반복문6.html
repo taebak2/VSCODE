@@ -24,11 +24,11 @@
 
 <body>
   <script>
-    for (i = 2; i < 9; i++) {
-      document.write("<div>");
-      document.write("<h2>구구단 " + i + "단" + "</h2>" + "<br>");
-      for (j = 1; j <= 9; j++) {
-        document.write(i + " * " + j + " = " + i * j + "<br>");
+    for (i = 2; i < 9; i++)  { // i는 2부터 9까지 1씩 증가한다.
+      document.write("<div>"); // 태그를 사용할 때는 항상 document.write를 사용한다.
+      document.write("<h2>구구단 " + i + "단" + "</h2>" + "<br>"); // i는 2단부터 9단까지~
+      for (j = 1; j <= 9; j++) { //j는 1부터 9까지
+        document.write(i + " * " + j + " = " + i * j + "<br>"); //2곱하기 1~9, 3곱하기 1~9, ...
       } document.write("</div>");
     }   
   </script>
