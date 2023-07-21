@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var car = new Object();  // 객체 생성
+    car.company = "기아";
+    car.speed = 200;
+    car.color = "비건디 와인";
+    car.info = function () {
+      document.write("자동차 제조회사 : " + this.company, "<br>");
+      document.write("자동차 색상 : " + this.company, "<br>");
+    }
+
+    car.info();
+  </script>
+</body>
+
+</html>

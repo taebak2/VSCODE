@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    div {
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 100%;
+      text-align: center;
+      width: 200px;
+      height: 200px;
+      padding: 15px;
+      background-color: skyblue;
+    }
+
+    span {
+      color: red;
+      font-size: larger;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    document.write("<div>");
+    var now = new Date("2023,07,21"); // 오늘 날짜
+    var endDay = new Date("2024,09,01"); // 제대 날짜
+
+    var diff = endDay.getTime() - now.getTime();
+    var result = Math.ceil(diff / (60 * 1000 * 60 * 24));
+    document.write("<h3>제대 날짜</h3>")
+    document.write("<span>" + result + "</span> 일 남으셨습니다. <br>이제 곧 집에 가요.<br><br>축하합니다!");
+    document.write("</div>");
+      
+
+
+
+
+    // ceil 반올림 
+     // 밀리세컨드 ms(1000분의 1초)를 1초 단위로 변경 -> * 1000
+    // 1분 = 60초 -> * 60
+    // 1시간 = 60 -> * 60
+    // 하루 = 24시간 -> * 24
+    // 전체를 날짜 단위로 변경함 
+    // document.querySelector('span').intterText = remainTime; 문서에서 id가 result인 대상을
+    // 찾아 그 태그 안에 남은 일수를 넣음
+  </script>
+</body>
+
+</html>
