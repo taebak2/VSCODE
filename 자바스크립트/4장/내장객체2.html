@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Document</title>
+  <title>내장객체2</title>
 </head>
 <body>
   <script>
-    var start = new Date(2023,1,1);
+    var start = new Date(2023,1,1); 
     var end = new Date(2023,7,21);
 
-    var diff = end.getTime() - start.getTime(); // 
-    var result = Math.ceil(diff / (60*1000*60*24));
+    var diff = end.getTime() - start.getTime(); // 남은 날짜
+    var result = Math.ceil(diff / (60*1000*60*24)); // Math.ceil(); 주어진 숫자보다 크거나 같은 숫자 중 가장 작은 숫자를 integer 로 반환
     // 밀리세컨드 ms(1000분의 1초)를 1초 단위로 변경 -> * 1000
     // 1분 = 60초 -> * 60
     // 1시간 = 60 -> * 60
