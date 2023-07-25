@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>문자열객체</title>
+  <style>
+  </style>
+</head>
+
+<body>
+
+  <script>
+    var email = prompt("이메일을 입력해 주세요");
+    var check = email.indexOf("@"); // @
+    var a = email.substring(email.length-3); // com or net
+    var b = email.substring(email.length-2); // kr
+    if(check>=0 && a=="com" || a=="net" && b=="kr"){ // check가 @가 있거나, a가 com or net, b가 kr이 있으면...
+      document.write(email);
+    }
+    else{
+      document.write("이메일 형식이 올바르지 않습니다.")
+    }
+ // email에 @가 붙어 있지 않거나 도메인이 kr, com, net으로 끝나지 않으면
+ // 이메일 형식이 올바르지 않습니다 출력
+ // 맞게 입력 했으면 해당 이메일 출력
+  </script>
+
+</body>
+
+</html>

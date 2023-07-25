@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>문자열객체</title>
+  <style>
+    table{
+      border: 1px solid black;
+      text-align: center;
+    }
+    td{text-align: center;
+      border: 1px solid black;
+
+    }
+  </style>
+</head>
+
+<body>
+    <table>
+      <tr>
+        <td>이름</td>
+        <td id="name"></td>
+      </tr>
+      <tr>
+        <td>소속</td>
+        <td id="city"></td>
+      </tr>
+      <tr>
+        <td>선거구</td>
+        <td id="district"></td>
+      </tr>
+    </table>
+ 
+  <script>
+    var name = prompt("당신의 이름은?"); // id를 먼저 입력해줘야 script 영역에서 id를 끌어다 쓸 수 있음 
+    var address = prompt("당신의 주소는?");
+    document.querySelector('#name').innerHTML = name;
+    var a = address.split(" ");
+    document.querySelector('#city').innerHTML = a[0];
+    document.querySelector('#district').innerHTML = a[1];
+
+
+    
+  </script>
+
+</body>
+
+</html>

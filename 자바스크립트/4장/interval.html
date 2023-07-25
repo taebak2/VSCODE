@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+<button onclick="clearInterval(auto_1)">증가 중지</button>
+<p id="num"></p>
+<body>
+  <script>
+    var addNum = 0;
+    var subNum = 1000;
+    var auto_1 = setInterval(function () {
+      addNum++;
+      document.querySelector("#num").innerHTML = addNum;
+    }, 500);
+  </script>
+</body>
+
+</html>

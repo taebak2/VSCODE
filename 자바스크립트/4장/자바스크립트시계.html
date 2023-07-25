@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    div {
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 500px;
+      height: 500px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 20px;
+      margin-top: 100px;
+      line-height: 100px;
+    }
+
+    #num {
+      display: inline-block;
+      font-size: 50px;
+    }
+    h2{
+      margin-top: 100px;
+      font-size: 40px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <div>
+    <script>
+      //gethours, getminutes, getdata
+      var today = new Date(); // 시간 객체 생성
+      today.getDate;
+      nowHours = today.getHours();
+      nowMinute = today.getMinutes();
+      nowSecond = today.getSeconds();
+      document.write("<h2>");
+      document.write("자바 스크립트 시계");
+      document.write("</h2>");
+      document.write("<p id='num'>", "</p>");
+      var time = setInterval(function () {
+        nowSecond++;
+        document.querySelector("#num").innerHTML = nowHours + "시 " + nowMinute + "분 " + nowSecond + "초";
+      }, 1000);
+    </script>
+  </div>
+</body>
+
+</html>
