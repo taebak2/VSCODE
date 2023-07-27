@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    #item{
+      position: relative;
+      width: 500px;
+      height: auto;
+      padding: 15px 20px;
+      margin: auto;
+    }
+    button{
+      background-color: rgba(255,255,255,0.7);
+      padding: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.8em;
+    }
+    .over{
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+    }
+    .detail{
+      width: 400px;
+      text-align: left;
+      line-height: 1.8;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="item">
+    <img src="images/플럼바고.jpg" width="400px" height="300px">
+<button class="over" id="open" onclick="show()">상세 설명 보기</button>
+<div id="desc" class="detail">
+  <h4>플럼바고</h4>
+  <p>꽃말 : 은밀한 열정
+    <br>5~8월 사이에 만개한다.
+  </p>
+<button id="close" onclick="hide()">상세 설명 닫기</button>
+</div>
+</div>
+<script>
+  function show(){
+    document.querySelector('#desc').style.display = "block"; // 기본값 
+    document.querySelector('#open').style.display = "none"; // 상세 설명 보기 클릭했을 때 안보임 
+  }
+
+  function hide(){
+    document.querySelector('#desc').style.display = "none"; // div id=desc가 감싸고 있는 h4 플럼바고~ button 상세 설명 닫기까지 숨기기 안보이게 하기
+    document.querySelector('#open').style.display = "block"; // 상세 설명 보기가 기본값으로 보임
+  }
+</script>
+</body>
+</html>
