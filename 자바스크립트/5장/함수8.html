@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    (function () {
+      var num = 100; // 지역 변수
+      function menu() { // 지역 함수
+        num += 100;
+        alert(num);
+      }
+      menu();
+    }());
+    (function () {
+      function menu() {
+        alert(num); // 함수 이름이 똑같으면 맨 마지막에 입력된 함수가 실행됨 예방하기 위해 지역 변수, 지역 함수를 설정해줘야한다.
+      }
+    }());
+  </script>
+</body>
+
+</html>

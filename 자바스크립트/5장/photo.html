@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #gallery{ 
+      /* 태그를 감싸고 있는 것의 제일 높은 계층, 즉 부모 클래스가 position값이 지정되어야 위치 변경(top,left,bottom,right)가 적용된다. */
+      position: relative; 
+      height: 200px;
+    }
+    img{
+      position: absolute;
+    }
+    p{position: absolute;
+      bottom: -10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="gallery">
+    <img src="images/1.jpg" id="mountain">
+    <p><button onclick="bt(0)" >이전</button>
+    <button onclick="bt(1)" >다음</button></p>
+  </div>
+  <script>
+    var num = 1;
+    function bt(select) { // select = 1인 상태 즉 참이면..
+      if (select) { // 다음 버튼을 눌렀을 때
+        if (num == 4)  num = 1; // num이 4면 1로 바꿔
+        else{num++; // 1씩 더해
+        }
+      }
+      else { // select = 0 인 상태 즉 거짓이면...
+        if(num==1) num=4; //이전버튼 눌렀을 때 1번보다 낮으면 4로 바꿔
+        num--;
+      }
+      var image = document.getElementById("mountain");
+      image.setAttribute("src","images/"+num+".jpg");
+    } 
+  </script>
+</body>
+
+</html>

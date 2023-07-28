@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <div id="galleryZone">
+    <p>
+      <img src="images/pic_1.jpg" id="photo">
+    </p>
+    <p>
+      <button onclick="gallery(0)">이전</button>
+      <button onclick="gallery(1)">다음</button>
+    </p>
+  </div>
+  <script>
+    var num = 1;
+    function gallery(direct){
+      if(direct){
+        if(num==8) return;
+        num++;
+      } else{
+        if(num==1) return;
+        num--;
+      }
+
+      var imgTag = document.getElementById("photo"); // getElementById가 이미 아이디 값이라 #photo 이런식으로 하면 안됩니다 vs document.querySelector #써도됩니다.
+      imgTag.setAttribute("src","images/pic_"+num+".jpg"); // setAtrtribute 선택한 요소의 속성값을 정함 즉 "src" 요소를 images/pic_num (1~8)까지로 변경한다.
+    }
+  </script>
+</body>
+</html>
