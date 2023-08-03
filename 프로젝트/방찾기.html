@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <script>
+     
+    function firstNum(arr_score){ // 배열에서 가장 큰 숫자를 찾기
+      var first = Math.max(...arr_score); // score배열에서 가장 큰 숫자
+      console.log(first);
+      var firstRoom = arr_score.indexOf(first); // 가장 큰 숫자가 있는 방 번호 
+      return firstRoom;}
+      var arr_score = [1,2,3,4,5,6,7,101,8,9];
+        var result = firstNum(arr_score);
+        console.log(result);
+
+
+
+
+    function numberRoom(arr_score) {
+      var num = Array.from(new Set(arr_score)); // 중복값 제외
+
+      var arrList = num.slice().sort((a, b) => b - a); // 배열 내림차순 정렬
+     for(i = 0; i <5; i++){
+       var Room = arr_score.indexOf(arrList[i]); // 배열 방번호 (가장 큰 숫자의 방번호가 처음부터 나옴)
+       console.log(Room);
+     } 
+    }
+
+      
+  </script>
+</body>
+</html>
