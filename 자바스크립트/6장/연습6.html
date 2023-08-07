@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      margin-top: 10px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    #main #dogbox {
+      border-radius: 5px;
+      border: 5px solid gray;
+      display: inline-block;
+      padding: 5px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function j_test(src) {
+      $("#main #dogbox").before("<img src='" + src + "'>"); 
+    }
+  </script>
+</head>
+
+<body>
+  어느 네모박스 세상에 개가 살고 있었어요. 그런데... <br><br>
+  <button type="button" onclick="j_test('images/huk.gif')">사람이 한명 왔어요</button>
+  <button type="button" onclick="j_test('images/dog061.gif')">개가 한마리 왔어요</button>
+  <button type="button" onclick="j_test('images/bird20.gif')">새가 한마리 왔어요</button>
+  <button type="button" onclick="j_test('images/bird34.gif')">닭이 한마리 왔어요</button>
+  <br>
+  <div id="main">
+    <div id="dogbox">
+      <img src="images/dog061.gif">
+    </div>
+    </div>
+</body>
+
+</html>
