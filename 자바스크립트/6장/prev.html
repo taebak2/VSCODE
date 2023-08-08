@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width : 800px;
+      text-align: center;
+      margin : 20px auto;
+    }
+    #main img {
+      cursor: pointer;
+      width: 70px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script> 
+  // ctrl + f2 = 같은 요소 한번에 지우기
+  $(function(){
+    $("#main img").bind("click", function () {j_test(this)}); // bind : 클릭했을 때 발생되는 event 
+
+  function j_test(a){
+        $(a).prevAll().attr("src","images/huk2.gif"); 
+        setTimeout(function(){ 
+            $(a).prevAll().attr("src","images/huk1.gif");
+        }, 500);
+    } 
+  }); 
+  // prev vs prevAll
+  </script>
+</head>
+<body>
+  <div id="main"> 
+    <img src="images/huk1.gif"/>
+    <img src="images/huk1.gif"/>
+    <img src="images/huk1.gif"/>
+    <img src="images/huk1.gif"/>
+    <img src="images/huk1.gif"/>
+    <img src="images/huk1.gif"/>
+    <img src="images/huk1.gif"/>
+  </div>
+</body>
+</html>

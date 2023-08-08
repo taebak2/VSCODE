@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      margin-top: 10px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    #main #dogbox {
+      border-radius: 5px;
+      border: 5px solid gray;
+      display: inline-block;
+      padding: 5px;
+    }
+
+    #main #new {
+      position: relative;
+      top: -100px;
+      z-index: 10;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    function j_test(src) {
+      var num = Math.floor(Math.random()*2);
+      if (num == 0) {
+        $("#main #dogbox").after("<img id='new' src='" + src + "'>");
+        $("#main #dogbox").next().animate({top:0}, 1000, "easeOutBounce"); // animate 기법 중 easeOutBounce 기법을 사용 
+      } else if(num==1) {
+        $("#main #dogbox").before("<img id='new' src='" + src + "'>"); 
+        $("#main #dogbox").prev().animate({top:0}, 1000, "easeOutBounce"); //  
+      }
+    }
+      // (before, after) vs (prev, next)  새로운 태그나 내용을 넣고 싶을때 : 모양이나 디자인??? 바꾸고싶을때 
+               
+  </script>
+</head>
+
+<body>
+  어느 네모박스 세상에 개가 살고 있었어요. 그런데... <br><br>
+  <button type="button" onclick="j_test('images/huk.gif')">사람이 한명 왔어요</button>
+  <button type="button" onclick="j_test('images/dog061.gif')">개가 한마리 왔어요</button>
+  <button type="button" onclick="j_test('images/bird20.gif')">새가 한마리 왔어요</button>
+  <button type="button" onclick="j_test('images/bird34.gif')">닭이 한마리 왔어요</button>
+  <br>
+  <div id="main">
+    <div id="dogbox">
+      <img src="images/dog061.gif">
+    </div>
+  </div>
+</body>
+</html>

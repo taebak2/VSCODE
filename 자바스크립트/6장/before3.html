@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      margin-top: 10px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    #main #dogbox {
+      border-radius: 5px;
+      border: 5px solid gray;
+      display: inline-block;
+      padding: 5px;
+    }
+
+    #main #new {
+      position: relative;
+      top: -150px;
+      z-index: 10;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    function j_test_get_img() { // 랜덤으로 그림파일 선택하는 함수 
+      var img = [
+        "images/huk.gif",
+        "images/dog021.gif",
+        "images/dog060.gif",
+        "images/shiba2.gif",
+        "images/bird20.gif",
+        "images/bird21.gif",
+        "images/bird27.gif",
+        "images/bird28.gif",
+        "images/bird34.gif"
+      ];
+      var rnd = Math.floor(Math.random() * img.length);
+      return img[rnd];
+    }
+
+    // before : 빠져나와서 앞
+function j_test_before(){
+  $('#main #dogbox').before('<img id="new" src="' + j_test_get_img() + '"/>'); 
+  $('#main #dogbox').prev().animate({top:0}, 1000, 'easeOutBounce');
+}
+ // after : 빠져나와서 뒤
+function j_test_after(){
+  $('#main #dogbox').after('<img id="new" src="' + j_test_get_img() + '"/>');
+  $('#main #dogbox').next().animate({top:0}, 1000, 'easeOutBounce');
+}
+// prepend : 바로 앞
+function j_test_prepend(){
+  $('#main #dogbox').prepend('<img id="new" src="' + j_test_get_img() + '"/>');
+  $('#main #dogbox img:first').animate({top:0}, 1000, 'easeOutBounce');
+}
+// append : 바로 뒤
+function j_test_append(){
+  $('#main #dogbox').append('<img id="new" src="' + j_test_get_img() + '"/>');
+  $('#main #dogbox img:last').animate({top:0}, 1000, 'easeOutBounce');
+}
+
+// remove : 제거
+function j_test_remove(){
+  $('#main img:not([name=firstimg])').animate({top:'-=300',opacity:0}, 1000, function(){
+    $(this).remove();
+  }); // 메인 밑 이미지 중에서 name이 firstimg가 아닌 것 
+}
+
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="j_test_before()">빠져나와서 앞</button>
+  <button type="button" onclick="j_test_prepend()">바로 앞</button>
+  <button type="button" onclick="j_test_append()">바로 뒤</button>
+  <button type="button" onclick="j_test_after()">빠져나와서 뒤</button>
+  <button type="button" onclick="j_test_remove()">모두 사라져!!</button>
+  <br>
+  <div id="main">
+    <div id="dogbox">
+      <img name="firstimg" src="images/dog060.gif">
+    </div>
+  </div>
+</body>
+
+</html>
