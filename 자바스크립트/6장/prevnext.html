@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      margin-top: 50px;
+      padding: 5px;
+      text-align: center;
+    }
+
+    #main #dogbox {
+      border-radius: 5px;
+      border: 5px solid gray;
+      display: inline-block;
+      padding: 5px;
+    }
+
+    #main #dogbox img {
+      position: relative;
+      top: 0px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      $("#main img").bind("click", function () { move(this) });
+      function move(chicken) {
+        $(chicken).animate({ top: -100 }, 1000, 'swing');
+        $(chicken).animate({ top: 0 }, 1000, 'swing');
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <div id="dogbox">
+      <div id="bird">
+        <img src="images/bird17.gif">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
