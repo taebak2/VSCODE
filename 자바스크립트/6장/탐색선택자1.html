@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      margin-top: 50px;
+      padding: 5px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    #main img {
+      position: relative;
+      top: 0px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    function getOut() {
+      $("#main img:first").animate({ 'left': '-=150', 'opacity': '0' }, 500, function () {
+        $(this).remove();
+      });
+    }
+  </script>
+</head>
+
+<body>
+  첫 번째사람부터 내보내기<br>
+  <button type="button" onclick="getOut()">나가유~</button>
+
+  <div id="main">
+    <img src="images/huk2.gif">
+    <img src="images/huk2.gif">
+    <img src="images/huk2.gif">
+    <img src="images/huk2.gif">
+    <img src="images/huk2.gif">
+    <img src="images/huk2.gif">
+  </div>
+</body>
+
+</html>

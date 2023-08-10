@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #main img {
+      width: 120px;
+      margin-bottom: 7px;
+    }
+
+    #main span {
+      display: inline-block;
+      padding: 5px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    function go() {
+    var n = 0;
+    $('#main img').each(function(){
+      var change = this;
+      setTimeout(function(){
+        $(change).attr('src','images/huk2.gif');
+    }, n+=500);
+    setTimeout(function(){
+      $(change).attr('src','images/huk1.gif');
+    }, n+=500);
+    });
+    }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="go()">번호~</button>
+
+  <div id="main">
+    <span><img src="images/huk1.gif"><br>병장</span>
+    <span><img src="images/huk1.gif"><br>상병3</span>
+    <span><img src="images/huk1.gif"><br>상병1</span>
+    <span><img src="images/huk1.gif"><br>일병3</span>
+    <span><img src="images/huk1.gif"><br>일병2</span>
+    <span><img src="images/huk1.gif"><br>이등병</span>
+  </div>
+</body>
+
+</html>

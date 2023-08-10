@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #main img {
+      width: 120px;
+      margin-bottom: 7px;
+    }
+
+    #main span {
+      display: inline-block;
+      padding: 5px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    function sli(t) {
+      t.attr("src", "images/huk2.gif"); // 클릭시 이미지를 huk2로 변경
+      setTimeout(function () {
+        t.attr('src', 'images/huk1.gif'); // 0.5초 뒤 이미지를 huk1으로 변경 
+      }, 500);                            // attr() 메서드는 jQuery 라이브러리에서 제공되는 함수로
+    }                                     // HTML 요소의 속성(attribute) 값을 가져오거나 설정하는 데 사용
+      
+    
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="sli($('#main img').slice(1))">병장 밑으로 다 집합!</button>
+  <button type="button" onclick="sli($('#main img').slice(3))">상병 밑으로 다 집합!</button>
+  <button type="button" onclick="sli($('#main img').slice(5))">막내야!</button>
+
+  <div id="main">
+    <span><img src="images/huk1.gif"><br>병장</span>
+    <span><img src="images/huk1.gif"><br>상병3</span>
+    <span><img src="images/huk1.gif"><br>상병1</span>
+    <span><img src="images/huk1.gif"><br>일병3</span>
+    <span><img src="images/huk1.gif"><br>일병2</span>
+    <span><img src="images/huk1.gif"><br>이등병</span>
+  </div>
+</body>
+
+</html>

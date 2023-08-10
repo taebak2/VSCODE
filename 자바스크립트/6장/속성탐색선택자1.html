@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid silver;
+      padding: 5px;
+      border-radius: 5px;
+    }
+
+    #main img {
+      width: 60px;
+      margin-bottom: 7px;
+      position: relative;
+    }
+
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+
+    function go() {
+      $("#main img[name=discoDog]").animate({ top: -100 }, 500) // 위로 올라감
+      .animate({top:0},500); // 다시 내려옴 
+    }
+
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="go()">쉬바~</button>
+
+  <div id="main">
+    <img src="images/bird17.gif">
+    <img src="images/bird17.gif">
+    <img src="images/bird17.gif">
+    <img src="images/shiba2.gif" name="discoDog">
+    <img src="images/bird17.gif">
+    <img src="images/bird17.gif">
+    <img src="images/bird17.gif">
+  </div>
+</body>
+
+</html>
