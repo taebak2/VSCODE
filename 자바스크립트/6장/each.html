@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid gray;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    #main img {
+      width: 60px;
+      margin-bottom: 7px;
+    }
+
+    #main span {
+      display: inline-block;
+      padding: 5px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function go() {
+      console.log(this);
+    var n = 0; // setTimeout 함수로 사진이 변경될 때 텀을 주기 위해서 변수값 n 선언
+    $('#main img').each(function () {
+      var change = this; //  this : 현재 실행 중인 함수의 컨텍스트에서 참조하는 객체
+                         //  each 루프 내에서 현재 반복되는 이미지 요소를 참조하는 데 사용
+                         //  change : 현재 처리 중인 이미지 요소를 가리키는 역할
+      setTimeout(function () { 
+        $(change).attr('src', 'images/huk2.gif'); 
+      }, n += 500);
+      setTimeout(function () {
+        $(change).attr('src', 'images/huk1.gif');
+      }, n += 500);
+    });
+  }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="go()">번호~</button>
+
+  <div id="main">
+    <span><img src="images/huk1.gif"><br>병장</span>
+    <span><img src="images/huk1.gif"><br>상병3</span>
+    <span><img src="images/huk1.gif"><br>상병1</span>
+    <span><img src="images/huk1.gif"><br>일병3</span>
+    <span><img src="images/huk1.gif"><br>일병2</span>
+    <span><img src="images/huk1.gif"><br>이등병</span>
+  </div>
+</body>
+</html>
