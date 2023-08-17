@@ -2,25 +2,24 @@
 <html lang="en">
 
 <head>
-  <title>Document</title>
+  <title>객체조작</title>
   <script src="js/jquery_1.12.4_jquery.min.js"></script>
   <script>
     $(function () {
-      var result_1 = $("#sec_1").html();      // sec_1 : 밑에 있는 요소(태그 포함) 내용을 전부 가져옴
-      $("#sec_3").html(result_1);             // sec_3 : sec_1 요소를 가져옴 
-      $("#sec_4").html("<h2>속성 추가</h2>");  // sec_4 : h2 태그 추가 <h2>속성 추가</h2>
-      var result_2 = $("#sec_2").text();      // sec_2의 내용을 전부 가져옴
-      $("#sec_3 h2").text(result_2);          // h2태그 안의 내용을 result_2로 변경
-    });
+      var result_1 = $("#sec_1").html();      // sec_1 요소의 내용을 result_1 변수에 저장
+      $("#sec_3").html(result_1);             // sec_1 요소의 내용인 result_1을 #sec_3 요소 내에 삽입
+      $("#sec_4").html("<h2>속성 추가</h2>");  // sec_4 요소 내에 <h2>속성 추가</h2>를 추가
+      var result_2 = $("#sec_2").text();      // sec_2 요소의 텍스트 내용을 result_2 변수에 저장
+      $("#sec_3 h2").text(result_2);          // sec_3 요소 내의 h2 요소의 텍스트를 result_2로 변경
   </script>
 </head>
 <body>
   <h1>
-    <strong>객체 조작 및 생성</strong>
+    <strong>객체 조작 및 생성</strong> /* strong : text 굵게 */
   </h1>
   <section id="sec_1">
     <h2>
-      <em>html()</em>
+      <em>html()</em> /* em : 이탤릭체 */
     </h2>
     <p>내용1</p>
   </section>
