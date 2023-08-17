@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>속성선택자</title>
+  <title>속성선택자4</title>
   <style>
      #main {
       border: 3px solid gray;
@@ -12,8 +12,9 @@
       width: 300px;
     }
     #main img{
-      position: relative; /*이미지 움직이려면 포지션값 항상 줘야한다!*/
+      position: relative; 
     }
+    /* position: relative;는 요소를 원래 위치에서 이동시킬 수 있도록 해주는 기본적인 스타일 속성 */
   </style>
   <script src="js/jquery_1.12.4_jquery.min.js"></script>
   <script>
@@ -31,8 +32,9 @@
     }
     function bird() {
       $('#main').find('.bird').animate({top:-100}, 1000);
-      $('#main').find('.bird').animate({top:0}, 1000); // find() class값이 bird인 요소를 선택
+      $('#main').find('.bird').animate({top:0}, 1000);
     }
+      // find() 문서 구조 내에서 특정 요소를 찾는 데 사용
   </script>
 </head>
 
