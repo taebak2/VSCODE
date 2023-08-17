@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>속성선택자</title>
+  <style>
+     #main {
+      border: 3px solid gray;
+      padding: 5px;
+      margin: 100px;
+      border-radius: 20px;
+      width: 300px;
+    }
+    #main img{
+      position: relative; /*이미지 움직이려면 포지션값 항상 줘야한다!*/
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function dog() {
+      $('#main').find('.dog').animate({top:-100}, 1000); 
+      $('#main').find('.dog').animate({top:0}, 1000); 
+    }
+    function chicken() {
+      $('#main').find('.chicken').animate({top:-100}, 1000);
+      $('#main').find('.chicken').animate({top:0}, 1000);
+    }
+    function cat() {
+      $('#main').find('.cat').animate({top:-100}, 1000);
+      $('#main').find('.cat').animate({top:0}, 1000);
+    }
+    function bird() {
+      $('#main').find('.bird').animate({top:-100}, 1000);
+      $('#main').find('.bird').animate({top:0}, 1000); // find() class값이 bird인 요소를 선택
+    }
+  </script>
+</head>
+
+<body>
+  <h3>클릭한 동물을 점프시켜 봅시다!</h3>
+  <button type="button" onclick="chicken()">닭</button>
+  <button type="button" onclick="cat()">고양이</button>
+  <button type="button" onclick="dog()">개</button>
+  <button type="button" onclick="bird()">새</button>
+  <div id="main">
+      <img class="chicken" src="images/bird17.gif">
+      <img class="cat" src="images/cat051.gif">
+      <img class="chicken" src="images/bird17.gif">
+      <img class="chicken" src="images/bird17.gif">
+      <img class="cat" src="images/cat051.gif">
+      <img class="bird" src="images/bird21.gif">
+      <img class="dog" src="images/shiba2.gif">
+      <img class="chicken" src="images/bird17.gif">
+      <img class="dog" src="images/shiba2.gif">
+      <img class="bird" src="images/bird21.gif">
+      
+  </div>
+
+</body>
+
+</html>

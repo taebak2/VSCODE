@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>속성선택자</title>
+  <style>
+    #main{
+      text-align: center;
+    }
+     #main div {
+      border: 3px solid gray;
+      padding: 5px;
+      margin: 10px;
+      border-radius: 20px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function dog() {
+      $('#main div:contains(강아지)').css('border-color','red');
+    }
+    function tv() {
+      $('#main div:contains(텔레비젼)').css('border-color','blue');
+    }
+    function man() {
+      $('#main div:contains(사람)').css('border-color','magenta');
+    }
+    function re() {
+      $('#main div').css('border-color','');
+    }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="dog()">강아지를 찾아라!</button>
+  <button type="button" onclick="tv()">텔레비전을 찾아라!</button>
+  <button type="button" onclick="man()">사람을 찾아라!</button>
+  <button type="button" onclick="re()">다시하기</button>
+  <div id="main">
+    <div>
+      <img src="images/dog021.gif">
+      <p>여기 강아지가 있습니다.</p>
+    </div>
+    <div>
+      <img src="images/life0010.gif">
+      <p>여기 텔레비젼 있습니다.</p>
+      
+    </div>
+    <div>
+      <img src="images/huk.gif">
+      <p>여기 사람이 있습니다.</p>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
