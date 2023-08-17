@@ -16,15 +16,19 @@
   </style>
   <script src="js/jquery_1.12.4_jquery.min.js"></script>
   <script>
-    function dog() {
+    function dog() {   
       $('#main div:contains(강아지)').css('border-color','red');
     }
+    // div:contains() : 특정 텍스트 또는 내용을 포함하는 HTML 요소를 선택하는데 사용되는 메서드
+    
     function tv() {
       $('#main div:contains(텔레비젼)').css('border-color','blue');
     }
+    
     function man() {
       $('#main div:contains(사람)').css('border-color','magenta');
     }
+    
     function re() {
       $('#main div').css('border-color','');
     }
@@ -32,7 +36,7 @@
 </head>
 
 <body>
-  <button type="button" onclick="dog()">강아지를 찾아라!</button>
+  <button type="button" onclick="dog()">강아지를 찾아라!</button> 
   <button type="button" onclick="tv()">텔레비전을 찾아라!</button>
   <button type="button" onclick="man()">사람을 찾아라!</button>
   <button type="button" onclick="re()">다시하기</button>
