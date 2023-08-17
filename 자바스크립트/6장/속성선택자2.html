@@ -6,11 +6,11 @@
   <script src="js/jquery_1.12.4_jquery.min.js"></script>
   <script>
     $(function () {
-      $("#inner_1 p:contains(내용1)").css("background", "red"); // 내용 1을 포함하는 요소만 선택
-      $("#inner_1 p:has(strong)").css("background", "yellow"); // <p> 요소 중 <strong> 요소를 포함하는 요소만 선택
-      $("#outer_wrap").contents().css({"border":"1px dashed #00f"}); // outer_wrap인 요소의 하위 요소의 텍스트와 태그 노드 선택
+      $("#inner_1 p:contains(내용1)").css("background", "red");       // 내용 1을 포함하는 요소만 선택
+      $("#inner_1 p:has(strong)").css("background", "yellow");        // <p> 요소 중 <strong> 요소를 포함하는 요소만 선택
+      $("#outer_wrap").contents().css({"border":"1px dashed #00f"});  // outer_wrap인 요소의 하위 요소의 텍스트와 태그 노드 선택
       $("#inner_2 p").not(":first").css({"background-color":"#0f0"}); // <p>요소에서 첫번째 요소만 제외하고 선택
-      $("#inner_2 p").eq(2).end().css({"color":"#f00"}); // id값 inner_2인 요소의 하위 <p> 요소에서 인덱스 2인 요소 선택 + end 메서드(인덱스 선택하기 전의 선택자에 적용)
+      $("#inner_2 p").eq(2).end().css({"color":"#f00"});              // id값 inner_2인 요소의 하위 <p> 요소에서 인덱스 2인 요소 선택 + end 메서드(인덱스 선택하기 전의 선택자에 적용)
     });
   </script>
 </head>
