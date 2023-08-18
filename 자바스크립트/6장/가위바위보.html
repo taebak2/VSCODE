@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    section {
+      display: inline-block;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function game() { // 사용자 입력 
+      var user = prompt("당신의 선택은?");
+      var userNum;
+      if (user == "가위") {
+        userNum = 1;
+      } else if (user == "바위") {
+        userNum = 2;
+      } else if (user == "보") {
+        userNum = 3;
+      } else {
+        alert("잘못 입력했어요");
+        location.reload();
+      }
+      var comNum = Math.ceil(Math.random() * 3);
+
+
+      $("#sec_1 img").attr("src", "images/math_img_" + comNum + ".jpg");
+      $("#sec_2 img").attr("src", "images/math_img_" + userNum + ".jpg");
+
+
+      var result;
+
+      if (userNum == 1 && comNum == 1) {
+        result = "무승부";
+      }
+      if (userNum == 1 && comNum == 2) {
+        result = "컴퓨터 승";
+      }
+      if (userNum == 1 && comNum == 3) {
+        result = "사용자 승";
+      }
+      if (userNum == 2 && comNum == 1) {
+        result = "사용자 승";
+      }
+      if (userNum == 2 && comNum == 2) {
+        result = "무승부";
+      }
+      if (userNum == 2 && comNum == 3) {
+        result = "컴퓨터 승";
+      }
+      if (userNum == 3 && comNum == 1) {
+        result = "컴퓨터 승";
+      }
+      if (userNum == 3 && comNum == 2) {
+        result = "사용자 승";
+      }
+      if (userNum == 3 && comNum == 3) {
+        result = "무승부";
+      }
+      $("#result").text(result);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>
+    <strong>신나는 가위바위보 게임!!!</strong>
+  </h1>
+  <section id="sec_1">
+    <h2> 컴퓨터 </h2>
+    <p><img src="images/math_img_1.jpg" alt="가위" border="2"></p>
+  </section>
+  <section id="sec_2">
+    <h2> 사용자 </h2>
+    <p><img src="images/math_img_1.jpg" alt="가위" border="2"></p>
+  </section>
+  <br>
+  <button type="button" onclick="game()">게임시작</button>
+  <br>
+  <h1> 게임 결과 </h1>
+  <h2 id="result"></h2>
+</body>
+
+</html>

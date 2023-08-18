@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #p1 {
+      background: red;
+    }
+
+    .yellow {
+      color: yellow;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function yellow() {
+      $("#p1").addClass("yellow");
+    }
+  </script>
+</head>
+
+<body>
+  <p id="p1">가나다라바사</p>
+  <button type="button" onclick="yellow()">노랑</button>
+</body>
+
+</html>

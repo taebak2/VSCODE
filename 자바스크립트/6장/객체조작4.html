@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid gray;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    #main .on {
+      background: pink;
+      border-radius: 50%;
+      border: 3px solid red;
+      padding: 5px;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>function j_test(){
+$("#main span").has('img').addClass("on"); 
+// $("요소 선택").addClass("class 값") : 요소를 선택하여 지정한 class 값 생성
+setTimeout(function(){
+  $('#main span img').has('img').removeClass('on');},1000);
+}
+
+  </script>
+</head>
+
+<body>
+  span 요소 안에 이미지가 있는 것을 찾아보세요.<br><br>
+
+  <button type="button" onclick="j_test()">눌러보세요</button>
+  <div id="main">
+    <span>
+      <img src="images/dog061.gif">
+    </span>
+    <img src="images/shiba2.gif">
+    <span>
+      귀요미 선생님!!
+    </span>
+  </div>
+</body>
+
+</html>
