@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+    .active{
+      color: red;
+    }
+    .on{
+      color: yellowgreen;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".wrap_1 p:first").text("내용1");                        
+      // 클래스 wrap_1의 p태그 첫 번째 내용인 (텍스트1) -> 내용1로 변경
+      $(".wrap_1 input:first").val("안녕하세요");
+      // val(): HTML 폼 요소의 값을 가져오거나 설정하는 메서드     
+      // 주로 input, textarea, select 등의 폼 요소에서 사용
+      // value값을 가져옴                                                        
+      $(".wrap_1 p.active").removeClass("active").addClass("on"); 
+      // "wrap_1 p.active : 클래스가 "active"인 p 요소들을 선택
+      // removeClass("active"): 선택된 p 요소들로부터 "active" 클래스를 제거
+      // addClass("on"): 선택된 p 요소들에 대해 "on" 클래스를 추가
+      $(".wrap_1 p:eq(2) a").attr("href","http://www.naver.com");
+      // p:eq(2): 선택한 ".wrap_1" 요소들 내의 p 요소들 중에서 인덱스가 2인 요소를 선택합니다. 
+      // 인덱스는 0부터 시작합니다. 따라서 p:eq(2)는 세 번째 p 요소를 의미합니다.
+      // attr(): HTML 요소의 속성(attribute) 값을 읽거나 설정하는 데 사용
+      // "href", "src", "class"와 같은 것들이 속성
+      $(".wrap_1 p:eq(3) input").val("Korea");
+      $(".wrap_2 p:first").after("<p>애프터추가1</p>")
+      // .after("<p>애프터추가1</p>"): 선택한 첫 번째 p 요소 뒤에 새로운 p 요소를 추가
+      $(".wrap_2 p:first").before("<p>비포추가1</p>")
+      // .before("<p>비포추가1</p>"): 선택한 첫 번째 p 요소 앞에 새로운 p 요소를 추가
+      $(".wrap_3 p").unwrap().wrapInner("<strong>");
+      // .unwrap(): p 요소들의 부모를 삭제하고 p 요소들을 독립적으로 만듬
+      // .wrapInner("<strong>"): 선택한 p 요소들의 내용을 <strong> 태그로 감싸는 작업을 수행
+    });
+    
+    
+    
+    
+
+  </script>
+</head>
+
+<body>
+  <div class="wrap_1">
+    <p> 텍스트1 </p>
+    <p class="active"> 내용2 </p>
+    <p> <a href="#">네이버</a></p>
+    <p>
+      <input type="text" value="Hello">
+    </p>
+  </div>
+  <div class="wrap_2">
+    <p>내용5</p>
+    <p>내용6</p>
+  </div>
+  <div class="wrap_3">
+    <p>내용7</p>
+    <p>내용8</p>
+  </div>
+</body>
+
+</html>
