@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn1").click(function () {
+        $(".btn1").parent().next().css("color", "red");
+      });
+      $(".btn2").on({
+        "mouseover focus" : function () {
+          $(".btn2").parent().next().css("color", "blue");
+        },
+        // mouseover: 해당 요소에 마우스 커서가 진입했을 때 발생
+        // focus: 사용자가 특정 요소(예: input 상자)를 클릭하여 입력을 시작하거나, 탭 키를 사용하여 요소로 포커스를 이동할 때 이벤트가 발생
+        "mouseout blur" : function () {
+          $(".btn2").parent().next().css("color", "gray");
+        }
+        // blur: 사용자가 입력 요소에서 벗어나거나, 다른 요소를 클릭하여 포커스를 이동할 때 이벤트가 발생
+        // mouseout: 해당 요소에서 마우스 커서가 벗어났을 때 발생
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p>
+    <button class="btn1">버튼1</button>
+  </p>
+  <p>내용1</p>
+  <p>
+    <button class="btn2">버튼2</button>
+  </p>
+  <p>내용2</p>
+</body>
+</html>
