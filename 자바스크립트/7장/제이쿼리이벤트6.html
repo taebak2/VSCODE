@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>제이쿼리이벤트5</title>
+  <style>
+    #main {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      border: 3px solid lightgray;
+    }
+
+    #main img {
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#bird1").on("click", function () {
+
+        $("#bird1").animate({ top: -100 }, 1000);
+        $("#bird1").animate({ top: 0 }, 1000);
+      });
+
+      $("#bird2").on("dblclick", function () {
+        $("#bird2").animate({ top: -100 }, 1000);
+        $("#bird2").animate({ top: 0 }, 1000);
+      });
+
+      $("#bird3").on("click", function () {
+        $("#bird3").animate({ top:'-=100' }, 1000);
+        
+      });
+      $("#dog1").on("dblclick", function () {
+        $("#dog1").animate({ top: '+=100' }, 1000);
+      });
+
+    
+      
+
+    });
+
+
+      // 첫번째 그림 클릭하면 위로 올라갔다가 내려오기
+      // 두번째 그림 더블클릭하면 위로 올라갔다가 내려오기
+      // 세번째 그림 클릭하면 위로 계속 올라가기
+      // 네번째 그림 더블클릭하면 아래로 계속 내려가기
+
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="images/bird17.gif" id="bird1">
+    <img src="images/bird20.gif" id="bird2">
+    <img src="images/bird28.gif" id="bird3">
+    <img src="images/shiba2.gif" id="dog1">
+  </div>
+</body>
+
+</html>
