@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>비행기</title>
+  <style>
+    #main {
+      width: 300px;
+      height: 300px;
+      background-image: url(images/우주배경.jpg);
+      background-size: cover;
+      position: relative;
+    }
+
+    #air {
+      position: absolute;
+      left: 100px;
+      bottom: 66%;
+    }
+
+    #attack {
+      position: absolute;
+      display: none;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      var missileLaunched = false;
+
+      $(document).on("keydown", keyEventFnc);
+
+      function keyEventFnc(e) {
+        switch (e.keyCode) {
+          case 37:
+            $('#air').animate({ left: '-=10' }, 10);
+            break;
+          case 38:
+            $('#air').animate({ top: '-=10' }, 10);
+            break;
+          case 39:
+            $('#air').animate({ left: '+=10' }, 10);
+            break;
+          case 40:
+            $('#air').animate({ top: '+=10' }, 10);
+            break;
+          case 32:
+            if (!missileLaunched) {
+              missileLaunched = true;
+              launchMissile();
+            }
+            break;
+        }
+      }
+
+      function launchMissile() {
+        var missile = $("#attack");
+        var air = $("#air");
+
+        missile.css({
+          left: air.position().left + air.width() / 2 - missile.width() / 2,
+          top: air.position().top + air.height() / 2
+        });
+
+        missile.fadeIn(100).animate({ top: '0%' }, 1000, function () {
+          missile.fadeOut(100);
+          missileLaunched = false;
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <img id="air" src="images/김정은.png">
+    <img id="attack" src="images/미사일.png">
+  </div>
+</body>
+
+</html>
