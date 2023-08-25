@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>제이쿼리이벤트10</title>
+  <style>
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+      $("#rel_site").on("change",function(){
+        $(".txt").text($(this).val());
+      });
+    })
+    // 사용자가 드롭다운 메뉴에서 옵션을 선택하면 선택한 옵션의 값을 가져와서 
+    // .txt 클래스를 가진 요소들의 텍스트 내용으로 설정
+  </script>
+</head>
+<body>
+  <select id="rel_site">
+<option value="">사이트 선택</option>
+<option value="www.google.com">구글</option>
+<option value="www.naver.com">네이버</option>
+<option value="www.daum.net">다음</option>
+  </select>
+  <p class="txt"></p>
+</body>
+
+</html>

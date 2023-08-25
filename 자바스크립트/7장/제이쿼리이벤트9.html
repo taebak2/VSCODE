@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>제이쿼리이벤트9</title>
+  <style>
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#user_id_1, #user_pw_1").on("focus",
+        function () {
+          $(this).css("background", "pink");
+        });
+
+      $("#user_id_1, #user_pw_1").on("blur",
+        function () {
+          $(this).css("background", "white");
+        });
+      $("#frm_2").on("focusin", // focus를 받았을 때
+        function () {
+          $(this).css(
+            "background-color", "pink");
+        });
+      $("#frm_2").on("focusout", // focus를 잃었을 때
+        function () {
+          $(this).css(
+            "background-color", "#fff"
+          )
+        });
+    });
+  </script>
+</head>
+
+<body>
+  <form action="#">
+    <p>
+      <label for="user_id_1">아이디</label>
+      <input type="text" name="user_id_1" id="user_id_1">
+    </p>
+    <p>
+      <label for="user_PW_1">비밀번호</label>
+      <input type="password" name="user_PW_1" id="user_pw_1">
+    </p>
+  </form>
+  <form action="#" id="frm_2">
+    <p>
+      <label for="user_id_2">아이디2</label>
+      <input type="text" name="user_id_2" id="user_id_2">
+    </p>
+    <p>
+      <label for="user_PW_1">비밀번호</label>
+      <input type="password" name="user_PW_2" id="user_pw_2">
+    </p>
+  </form>
+</body>
+
+</html>

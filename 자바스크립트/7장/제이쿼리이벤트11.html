@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>제이쿼리이벤트11</title>
+  <style>
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#main select").change(function () {
+        var val = $(':selected').val();
+        $('#main textarea').val(val);
+      });
+    });
+    //  : selected 현재 선택된 옵션을 가리키는 것
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <h3>
+      좋아하는 동물을 고르세요
+    </h3>
+  
+  <select>
+    <option value="">윌리암슨 수액빨이 딱다구리</option>
+    <option value="">- 선택 -</option>
+    <option value="굿펠로우 나무타기 캥거루">굿펠로우 나무타기 캥거루</option>
+    <option value="뉴칼레도니아 가고일 도마뱀붙이">뉴칼레도니아 가고일 도마뱀붙이</option>
+    <option value="베네주엘라 붉은배 청타란튤라">베네주엘라 붉은배 청타란튤라</option>
+    <option value="북아메리카 검은머리 흰죽지">북아메리카 검은머리 흰죽지</option>
+    <option value="살찐꼬리 난장이 여우원숭이">살찐꼬리 난장이 여우원숭이</option>
+    <option value="윌리암슨 수액빨이 딱다구리">윌리암슨 수액빨이 딱다구리</option>
+    <option value="쿠비어 난장이 카이만">쿠비어 난장이 카이만</option>
+    <option value="귀욤뿌띵 선생님">귀욤뿌띵 선생님</option>
+  </select>
+  <textarea class="txt"></textarea>
+</body>
+</div>
+</html>
