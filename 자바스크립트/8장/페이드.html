@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn2").hide();
+
+      $(".btn1").on("click", function () {
+        $(".box").slideToggle(1000, "linear", function () {
+          $(".btn1").hide();
+          $(".btn2").show();
+        });
+      });
+
+      $(".btn2").on("click", function () {
+        $(".box").fadeIn(1000, "swing", function () {
+          $(".btn2").hide();
+          $(".btn1").show();
+        });
+      });
+        $(".btn3").on("click", function () {
+        $(".box").slideToggle(1000, "linear");
+      });
+        $(".btn4").on("click", function () {
+        $(".box").fadeTo("fast", 0.3);
+      });
+        $(".btn5").on("click", function () {
+        $(".box").fadeTo("fast", 1);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p>
+    <button class="btn1">슬라이드업</button>
+    <button class="btn2">페이드인</button>
+  </p>
+  <p>
+    <button class="btn3">토글슬라이드</button>
+  </p>
+  <button class="btn4">페이드투(0.3)</button>
+  <button class="btn5">페이드투(1)</button>
+  <div class="box">
+    <div class="content">
+      방문객 수 감소
+      곳곳에서 현실화=강원지역 동해안 수산업계가 원전 오염수 방류로 경제적 타격을 입기 시작했다. 일본 도쿄전력이 지난 25일 "첫 방류 이후 채취한 바닷물의 삼중수소 농도를 측정한 결과 기준치를 밑도는 것으로 나타났다"고 발표 했지만, 국내 소비자들은 아직 안심하지 못하는 분위기였다. 
+      도내 주요 횟집 상권들은 유동 인구 감소를 겪었다. 고성 봉포항활어회센터는 주말 저녁이면 꽉 차는 주차장이 이번 주말에는 절반 정도는 비었다. 배오복 봉포어촌계장은 "방문객 감소
+      속도가 생각보다 빠르다. 수산물 가격 하락으로 이어질까 걱정스럽다"고 말했다. 
+      속초 대포항의 상인들도 "막바지 피서철인데도 예년에 비해 유동인구가 30% 감소했다"며 "손님들이 일본산 가리비는 아예 찾지도 않기 시작했다"고 말했다.
+      9월 가을철 단체 관광객 예약도 뚝 끊겼다. 대형 횟집을 운영하는 박성균 경포 해안상가 상인회 부회장은 "지난해 이맘때에는 50~100명 규모 단체팀 예약이 6건 정도는 잡혀 있었는데
+      지금은 전무하다"며 "젊은 상인들은 횟집 대신 커피점으로 전환해야 하나 고민할 정도로 뒤숭숭하다"고 말했다. 
+    </div>
+  </div>
+</body>
+
+</html>

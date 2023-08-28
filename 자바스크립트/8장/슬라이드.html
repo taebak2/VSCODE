@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function(){
+     $("#main img").on("click",function(){
+      $(this).slideUp(2000,"linear");
+     });
+     $("#bt").on("click",function(){
+      $("#main img").slideToggle(2000,"swing");
+     })
+    });
+  </script>
+</head>
+<body>
+  <div id="main">
+    <img src="images/snail.gif">
+    <img src="images/bird17.gif">
+    <img src="images/shiba2.gif">
+    <img src="images/dog061.gif">
+  </div>
+  <button id="bt">슬라이드</button>
+</body>
+</html>

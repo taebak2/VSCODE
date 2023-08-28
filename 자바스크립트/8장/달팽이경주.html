@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>달팽이경주</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <style>
+    #main {
+      position: relative;
+      text-align: right;
+    }
+
+    #main img {
+      position: relative;
+      left: 0;
+    }
+  </style>
+  <script>
+    $(function () {
+      $("#go").on("click", function () {
+        var pos = $("#main img").position();
+        console.log(pos);
+        for (i = 1; i <= 9; i += 2) {
+          var speed = Math.floor(Math.random()*10 + 1) * 1000;
+          $("#main img:nth-child("+i+")").animate({ left: pos * -1 }, speed);
+        }
+      });
+    });
+    // position() 함수는 선택한 요소의 부모 요소 내에서의 위치를 나타내는 객체를 반환
+    // top, left값을 반환한다.
+    // i가 홀수인 이유는 br태그때문에 
+    // left: pos.left는 달팽이의 현재 x좌표, -1을 곱하면 현재 위치로부터 반대위치로 이동
+
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="images/snail.gif"><br>
+    <img src="images/snail.gif"><br>
+    <img src="images/snail.gif"><br>
+    <img src="images/snail.gif"><br>
+    <img src="images/snail.gif"><br>
+  </div>
+  <br>
+  <button type="button" id="go">달려라 달팽이 !!</button>
+</body>
+
+</html>

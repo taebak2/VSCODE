@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      // 테두리 버튼 클릭하면 그림 파일에 회색 두꺼운 테두리 삽입
+      // 둥글게 버튼 클릭하면 그림 파일 테두리 둥글게
+
+      $("#br").on("click", function () {
+        // $("#main img").css("border","3px solid gray");
+        $("#main img").addClass("bor");
+      });
+
+      $("#ro").on("click", function () {
+        $("#main img").css("border-radius", "50%");
+      });
+      $("#ts").on("click", function () {
+        $("#main img").slideToggle(1000, "linear");
+      });
+      $("#pio").on("click", function () {
+        $("#main img").fadeToggle(1000, "linear");
+      });
+    });
+
+  </script>
+  <style>
+    .bor {
+      border: 10px solid lightgray;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <img src="images/무등산.jpg">
+  </div>
+  <button id="br">테두리</button>
+  <button id="ro">둥글게</button>
+  <button id="ts">슬라이드토글</button>
+  <button id="pio">페이드토글</button>
+</body>
+
+</html>
