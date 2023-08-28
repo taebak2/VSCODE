@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>이벤트총정리</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      var baseFontSize = 14;
+      $(".zoomBtnZone button").on("click", zoomInOut);
+      function zoomInOut() {
+        if ($(this).hasClass("zoomOutBtn")) {
+          if (baseFontSize <= 8) return false;
+          baseFontSize--;
+        } else if ($(this).hasClass("zoomInBtn")) {
+          if (baseFontSize >= 20) return false;
+          baseFontSize++;
+        } else {
+          baseFontSize = 14;
+        }
+      
+      $(".fontSize").text(baseFontSize + "px");
+      $("body").css({ fontSize: baseFontSize + "px" });
+    }
+    });
+  </script>
+</head>
+
+<body>
+  <p class="zoomBtnZone">
+    <button class="zoomOutBtn">-</button>
+    <button class="originBtn">100%</button>
+    <button class="zoomInBtn">+</button>
+  </p>
+  <p class="fontSize">14px</p>
+  <div id="wrap">
+    스쿨존 내 안전 운전 의무 부주위로 사망·상해 교통사고를 냈을 경우 처벌할 수 있는 일명 ‘민식이법’의 취약점을 노려 스쿨존 도로 한복판에 누워 운전자를 조롱하고 위협하는 놀이가 아이들 사이에 생겨나고 있어
+    논란이다.
+    온라인 커뮤니티 보배드림에는 충남 서산에 있는 호수공원 인근 도로에서 남자아이 두 명이 드러누워 있는 모습이 찍힌 사진이 게시됐다.
+    사진을 게시한 작성자 A 씨는 “요즘 아이들 사이에서 유행하는 민식이법 놀이”라며 “호수공원 X자 신호등 사거리. 아이들 교육 요망! 학부모 공유!”라고 적었다.
+    A 씨가 올린 또 다른 사진에서는 저녁 시간에 초등학교 앞 횡단보도 위에서 검은 옷을 아이 두 명이 누워있는 모습이 찍혀 있었다. 아이들은 누워서 태연하게 휴대폰을 보고 있었다.
+    최근 이처럼 아이들이 스쿨존에서 운전하는 차량을 방해하기 위해 도로에 눕거나 갑자기 차에 뛰어드는 등의 행위가 크게 늘어난 것으로 전해졌다.
+  </div>
+</body>
+
+</html>

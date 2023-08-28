@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>제이쿼리이벤트12</title>
+  <style>
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      // 이벤트 등록 후에 생성된 요소에는 이벤트 등록이 안됨?? 
+      $(".btn_1.on").on("mouseover focus", function () {
+        alert("안녕하세요");
+      });
+      $(".btn_1").addClass("on");
+      // (".btn_1.on").on이 작동하려면 addClass에서 .btn_1이 선행되어야 하는데 
+      // 선행되지 않아서 btn_1클래스의 버튼을 눌러도 작동하지 않는다. 
+
+      $(document).on("mouseover focus", ".btn_2.on", function () {
+        alert("안녕하세요");
+      });
+      $(".btn_2").addClass("on");
+      // document는 doctype 전체를 먼저 실행하기 때문에 document를 실행함으로써 addClass가 이미 한번 불러졌다.
+      // 그래서 btn_2클래스의 function이 작동할 수 있다.
+
+      // 버튼3을 클릭하면 안에 글자 빨간색으로 변경
+      $(".btn_3").on("click", function(){
+        $(".btn_3").css("color","red");
+      });
+    });
+
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <p><button class="btn_1">버튼1</button></p>
+    <p><button class="btn_2">버튼2</button></p>
+    <p><button class="btn_3">버튼3</button></p>
+  </div>
+</body>
+
+</html>
