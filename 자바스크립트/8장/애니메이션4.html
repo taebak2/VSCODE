@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>애니메이션2</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#start").on("click", function () {
+        var pos = $("#main img").position();
+        $("#main img").animate({ left: pos.left * -1}, 10000);
+      });
+      $("#stop").on("click", function () {
+        $("#main img").stop();
+      });
+    });
+
+  </script>
+  <style>
+    * {
+      margin: 0 auto;
+    }
+    #main {
+      border: 3px solid lightgray;
+      width: 500px;
+      height: 300px;
+      text-align: center;
+      border-radius: 30px;
+      position: relative;
+    }
+    img{
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <button id="start">달려라</button>
+  <button id="stop">멈춰라</button>
+  <div id="main">
+    <img src="images/runner.gif">
+  </div>
+</body>
+</html>
